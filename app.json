@@ -1,0 +1,17 @@
+{
+    "name": "Heroku Connect Hamster",
+    "description": "Exercise an instance of Heroku Connect",
+    "addons": [
+        "heroku-postgresql:standard-0"
+    ],
+    "env": {
+        "HCH_SCHEMA": {
+                "description": "Database schema to use with Heroku Connect",
+                "value": "salesforce"
+        },
+        "HCH_RATE_LIMIT": {
+                "description": "Limit hamster to RATE_LIMIT to at most operations a second",
+                "value": "0.1"
+        }
+    }
+}

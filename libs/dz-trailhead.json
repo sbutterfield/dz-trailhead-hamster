@@ -1,0 +1,66 @@
+{
+  "mappings": [
+    {
+      "config": {
+        "sf_notify_enabled": false,
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_only",
+        "fields": {
+          "SystemModstamp": {},
+          "Name": {},
+          "IsDeleted": {},
+          "CreatedDate": {},
+          "Id": {}
+        },
+        "sf_polling_seconds": 600
+      },
+      "object_name": "Project__c"
+    },
+    {
+      "config": {
+        "sf_notify_enabled": false,
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_only",
+        "fields": {
+          "LastActivityDate": {},
+          "LastReferencedDate": {},
+          "Name": {},
+          "CreatedDate": {},
+          "CreatedById": {},
+          "LastModifiedById": {},
+          "LastViewedDate": {},
+          "Id": {},
+          "SystemModstamp": {},
+          "OwnerId": {},
+          "IsDeleted": {},
+          "LastModifiedDate": {}
+        },
+        "sf_polling_seconds": 600
+      },
+      "object_name": "Module__c"
+    },
+    {
+      "config": {
+        "sf_notify_enabled": false,
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_only",
+        "fields": {
+          "Progress__c": {},
+          "Id": {},
+          "CreatedDate": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "IsDeleted": {}
+        },
+        "sf_polling_seconds": 600
+      },
+      "object_name": "Badge__c"
+    }
+  ],
+  "version": 1,
+  "connection": {
+    "organization_id": "00DB00000000NizMAE",
+    "exported_at": "2015-09-14T17:08:18.079220+00:00",
+    "app_name": "dz-trailhead"
+  }
+}

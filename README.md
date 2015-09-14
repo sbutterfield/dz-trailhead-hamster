@@ -1,33 +1,26 @@
-# java-getting-started
+# App to exercise Heroku Connect
+![Image of Hammy and GP](media/Tales_of_the_Riverbank.png)
 
-A barebones Java app, which can easily be deployed to Heroku.  
+### Local Development
 
-This application support the [Getting Started with Java on Heroku](https://devcenter.heroku.com/articles/getting-started-with-java) article - check it out.
+    - cp env.example .env
+    - ./hammy
 
-## Running Locally
 
-Make sure you have Java and Maven installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+## Deployment
+  1. [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/heroku/hc-hamster)
+  2. Provision Connect
 
-```sh
-$ git clone https://github.com/heroku/java-getting-started.git
-$ cd java-getting-started
-$ mvn install
-$ foreman start web
-```
+    heroku addons:create [herokuconnect|connectqa]:test -a new-app-name
+    heroku addons:open [herokuconnect|connectqa] -a new-app-name
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+  3. Authenticate with Salesforce
+  4. Import configuration from config.json
+  5. Visit https://dashboard.heroku.com/apps/new-app-name and change to hobby dynos and enable pywriter
 
-## Deploying to Heroku
 
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
+### Salesforce
 
-## Documentation
-
-For more information about using Java on Heroku, see these Dev Center articles:
-
-- [Java on Heroku](https://devcenter.heroku.com/categories/java)
-
+  - Setup new SFDC Org for test harness using connect-team+new-app-name@heroku.com as the email address.
+  - Setup network whitelist for 54.0.0.0-55.255.255.255 and others discovered with the following command.
+  - curl http://app.herokuapp.com/api/ip

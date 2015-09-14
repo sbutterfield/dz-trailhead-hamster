@@ -1,1 +1,1 @@
-web:    java -cp target/classes:target/dependency/* Main
+pywriter: python hchamster/writer.py
